@@ -1,0 +1,18 @@
+<div class='row'>
+    <div class='col-xs-12'>
+        <p>Adicione novos Servidores ou Blueprints!</p>
+        <label>Nome do Servidor</label>
+        <input type='text' class='form-control' [(ngModel)]='serverName' />
+        <label>Conteúdo do Servidor</label>
+        <input type='text' class='form-control' [(ngModel)]='serverContent'>
+        <label>Tipo do Servidor</label>
+        <div class='radio'>
+            <label class='radio'><input type='radio' [(ngModel)]='serverType' value='server'>Padrão</label>
+            <label class='radio'><input type='radio' [(ngModel)]='serverType' value='blueprint'>Blueprint</label>
+        </div>
+        <br />
+        <button class='btn btn-primary' (click)='addServer()'>
+            Adicionar Servidor
+        </button>
+    </div>
+</div>

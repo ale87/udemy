@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'udemy';
+  serverElements = []
+  numbers: number[] = []
+
+  serverAdded(serverData: { serverType: String, serverName: String, serverContent: String }) {
+    this.serverElements.push({
+      type: serverData.serverType,
+      name: serverData.serverName,
+      content: serverData.serverContent
+    })
+  }
+
+  createComponent(number: number): void {
+    this.numbers.push(number) 
+  }
+
+  resetNumbers(): void {
+    this.numbers = []
+  }
 }
